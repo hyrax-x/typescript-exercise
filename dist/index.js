@@ -71,4 +71,14 @@ function anyTogether(value) {
 }
 const resultOne = anyTogether(`hi`);
 const resultTwo = anyTogether(1);
+// tuples
+let character = [`mario`, 20, true];
+let hsla;
+hsla = [200, `100%`, `50%`, 1];
+let cord;
+cord = [83, 92];
+// name tuples
+let newUser;
+newUser = [`peach`, 25];
+console.log(newUser[0]);
 //# sourceMappingURL=index.js.map

@@ -95,3 +95,20 @@ function anyTogether(value: any):any {
 }
 const resultOne: string = anyTogether(`hi`)
 const resultTwo = anyTogether(1)
+
+// tuples
+
+let character: [string, number, boolean] = [`mario`, 20, true]
+
+let hsla: [number, string, string, number]
+hsla = [200, `100%`, `50%`, 1]
+
+let cord: [number, number]
+
+cord = [83, 92]
+
+// name tuples
+
+let newUser: [name: string, age: number]
+newUser = [`peach`, 25]
+console.log(newUser[0])
