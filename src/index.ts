@@ -74,3 +74,24 @@ function formatGreeting(name:string, greeting:string):string {
     return `${greeting}, ${name}`
 }
 console.log(formatGreeting(`mario`,`hi`))
+
+//any type
+
+let car: any
+
+car = `honda`
+car = true
+
+//any type in array
+
+let cars: any[]
+
+cars = [12, `honda`, true]
+cars.push(null)
+console.log(cars)
+
+function anyTogether(value: any):any {
+    return value + value
+}
+const resultOne: string = anyTogether(`hi`)
+const resultTwo = anyTogether(1)
