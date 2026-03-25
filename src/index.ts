@@ -51,3 +51,26 @@ let person = {
     isFictional: true
 }
 
+// functions 
+
+function addTwoNumbers(a: number, b: number):number {
+    return a + b
+}
+
+const subTwoNumbers = (a:number, b:number):number => {
+    return a - b
+}
+console.log(addTwoNumbers(5, 10), subTwoNumbers(10, 5))
+
+function addAllNumbers(items: number[]) {
+    const total:number = items.reduce((a, c)=> a + c, 0)
+    console.log(total)
+}
+addAllNumbers([1,2,3,4,5,56])
+
+// return type inference
+
+function formatGreeting(name:string, greeting:string):string {
+    return `${greeting}, ${name}`
+}
+console.log(formatGreeting(`mario`,`hi`))

@@ -12,6 +12,14 @@ to compile typescript
 
 to run js
 
+### `tsc --init`
+
+create config for typescript
+
 ### `tsc --watch`
 
 Auto compile
+
+### `node --watch dist/index.js`
+
+auto run js
