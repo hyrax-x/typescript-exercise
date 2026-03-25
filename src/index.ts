@@ -202,3 +202,41 @@ function swapIDType(id:ID):ID {
     return (id)
 }
 swapIDType(`5`)
+
+//tagged interfaces
+
+function swapIDTypeTwo(id:ID):ID {
+    if (typeof id === `string`) {
+        //can use string method
+        return parseInt(id)
+    } else {
+        //can use number method
+        return id.toString()
+    }
+}
+const idOne = swapIDTypeTwo(1)
+const idTwo = swapIDTypeTwo(`2`)
+console.log(idOne, idTwo)
+
+// tagged interface
+
+interface UserTwo {
+    type: `user`
+    username: string
+    email: string
+    id: ID
+}
+
+interface Person {
+    type: `person`
+    firstName: string
+    age: number
+    id: ID
+}
+
+function logDetails (value: UserTwo | Person) {
+    if (value.type === `user`) {
+        return console.log(value.email, value.username)
+    }
+    return console.log(value.age, value.firstName)
+}

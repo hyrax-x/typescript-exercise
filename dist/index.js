@@ -131,4 +131,24 @@ function swapIDType(id) {
     return (id);
 }
 swapIDType(`5`);
+//tagged interfaces
+function swapIDTypeTwo(id) {
+    if (typeof id === `string`) {
+        //can use string method
+        return parseInt(id);
+    }
+    else {
+        //can use number method
+        return id.toString();
+    }
+}
+const idOne = swapIDTypeTwo(1);
+const idTwo = swapIDTypeTwo(`2`);
+console.log(idOne, idTwo);
+function logDetails(value) {
+    if (value.type === `user`) {
+        return console.log(value.email, value.username);
+    }
+    return console.log(value.age, value.firstName);
+}
 //# sourceMappingURL=index.js.map
