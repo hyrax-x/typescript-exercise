@@ -19,3 +19,4 @@ let anotherThing: undefined
 
 something = null
 anotherThing = undefined
+console.log(planet)

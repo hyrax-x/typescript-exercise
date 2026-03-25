@@ -11,3 +11,7 @@ to compile typescript
 ### node index.js
 
 to run js
+
+### tsc --watch
+
+Auto compile
