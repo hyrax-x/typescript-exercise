@@ -81,4 +81,22 @@ cord = [83, 92];
 let newUser;
 newUser = [`peach`, 25];
 console.log(newUser[0]);
+const authorOne = {
+    name: `mario`,
+    avatar: `/img/mario.png`
+};
+const newPost = {
+    title: `first post`,
+    body: `hi`,
+    tags: [`post`, `greeting`],
+    create_at: new Date(),
+    author: authorOne
+};
+function createPost(post) {
+    console.log(`created post: ${post.title} by ${post.author.name}`);
+}
+createPost(newPost);
+// interface with array
+let posts = [];
+posts.push(newPost);
 //# sourceMappingURL=index.js.map

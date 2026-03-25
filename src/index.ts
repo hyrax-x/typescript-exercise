@@ -112,3 +112,41 @@ cord = [83, 92]
 let newUser: [name: string, age: number]
 newUser = [`peach`, 25]
 console.log(newUser[0])
+
+//interface 
+
+interface Author {
+    name: string,
+    avatar: string
+}
+const authorOne: Author = {
+    name:`mario`, 
+    avatar: `/img/mario.png`
+}
+
+interface Post {
+    title: string,
+    body: string,
+    tags: string[],
+    create_at: Date,
+    author: Author
+}
+
+const newPost: Post = {
+    title: `first post`,
+    body: `hi`,
+    tags: [`post`, `greeting`],
+    create_at: new Date(),
+    author: authorOne
+}
+
+function createPost(post: Post): void {
+    console.log(`created post: ${post.title} by ${post.author.name}`)
+}
+createPost(newPost)
+
+// interface with array
+
+let posts: Post[] = []
+
+posts.push(newPost)
