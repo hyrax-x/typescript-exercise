@@ -115,4 +115,20 @@ function formatUser(user) {
     return `${user.name} has a score of ${user.score}`;
 }
 console.log(formatUser(userOne));
+// union types
+let someID;
+someID = 1;
+someID = `2`;
+let email = null;
+email = `example@gmail.com`;
+email = null;
+let anotherID;
+anotherID = `2398479823owier`;
+anotherID = 9812;
+//union type pitfall
+function swapIDType(id) {
+    parseInt(`2`); //! error with `2` replace with id
+    return (id);
+}
+swapIDType(`5`);
 //# sourceMappingURL=index.js.map

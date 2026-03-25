@@ -177,3 +177,28 @@ function formatUser(user: User) {
     return `${user.name} has a score of ${user.score}`
 }
 console.log(formatUser(userOne))
+
+// union types
+
+let someID: number | string
+
+someID = 1
+someID = `2`
+
+let email: string | null = null
+email = `example@gmail.com`
+email = null
+
+type ID = number | string
+
+let anotherID:ID
+anotherID = `2398479823owier`
+anotherID = 9812
+
+//union type pitfall
+
+function swapIDType(id:ID):ID {
+    parseInt(`2`) //! error with `2` replace with id
+    return (id)
+}
+swapIDType(`5`)
