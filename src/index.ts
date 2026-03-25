@@ -234,9 +234,24 @@ interface Person {
     id: ID
 }
 
+const exPerson: Person = {
+    type: `person`,
+    firstName: `Mario`,
+    age: 30,
+    id: 980834
+}
+const exUser: UserTwo = {
+    type: `user`,
+    username: `mario-1234`,
+    email: `mario@gmail.com`,
+    id: `09834`
+}
+
 function logDetails (value: UserTwo | Person) {
     if (value.type === `user`) {
         return console.log(value.email, value.username)
     }
     return console.log(value.age, value.firstName)
 }
+logDetails(exUser)
+logDetails(exPerson)

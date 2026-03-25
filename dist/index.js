@@ -145,10 +145,24 @@ function swapIDTypeTwo(id) {
 const idOne = swapIDTypeTwo(1);
 const idTwo = swapIDTypeTwo(`2`);
 console.log(idOne, idTwo);
+const exPerson = {
+    type: `person`,
+    firstName: `Mario`,
+    age: 30,
+    id: 980834
+};
+const exUser = {
+    type: `user`,
+    username: `mario-1234`,
+    email: `mario@gmail.com`,
+    id: `09834`
+};
 function logDetails(value) {
     if (value.type === `user`) {
         return console.log(value.email, value.username);
     }
     return console.log(value.age, value.firstName);
 }
+logDetails(exUser);
+logDetails(exPerson);
 //# sourceMappingURL=index.js.map
